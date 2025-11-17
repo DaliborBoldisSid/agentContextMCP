@@ -287,7 +287,12 @@ export class TypeScriptParser extends BaseParser {
     // Check if it's a function
     let symbolType = SymbolType.Variable;
     if (valueNode) {
-      if (valueNode.type === 'arrow_function' || valueNode.type === 'function') {
+      // Check for various function types including React functional components
+      if (valueNode.type === 'arrow_function' ||
+          valueNode.type === 'function' ||
+          valueNode.type === 'function_expression' ||
+          // Check if it looks like a React component (starts with capital letter)
+          (valueNode.type === 'arrow_function' && /^[A-Z]/.test(name))) {
         symbolType = SymbolType.Function;
       }
     }
