@@ -1,0 +1,38 @@
+{
+  "name": "code-context-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server providing automatic code context and relationship analysis for AI agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "code-context-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepare": "npm run build",
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "code-analysis",
+    "code-context",
+    "ast",
+    "tree-sitter",
+    "ai-tools"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "tree-sitter": "^0.21.0",
+    "tree-sitter-typescript": "^0.21.0",
+    "tree-sitter-javascript": "^0.21.0",
+    "tree-sitter-python": "^0.21.0",
+    "tree-sitter-java": "^0.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  }
+}

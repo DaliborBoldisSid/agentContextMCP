@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "code-context": {
+      "command": "node",
+      "args": [
+        "/path/to/code-context-mcp-server/dist/index.js"
+      ],
+      "env": {
+        "WORKSPACE_PATH": "/path/to/your/project"
+      }
+    }
+  }
+}
